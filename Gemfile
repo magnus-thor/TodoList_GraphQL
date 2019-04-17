@@ -13,15 +13,9 @@ gem "rails", "~> 5.2.2"
 
 group :development, :test do
   gem "pry-rails", "~> 0.3.6"
-end
-
-group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
-end
-
-group :test do
   gem "database_cleaner", "~> 1.6", ">= 1.6.2"
   gem "factory_bot_rails", "~> 4.8", ">= 4.8.2"
   gem "faker", "~> 1.8", ">= 1.8.7"
