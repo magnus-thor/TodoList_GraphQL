@@ -728,3 +728,6 @@ RSpec/NotToNot:
 
 RSpec/EmptyLineAfterSubject:
   Enabled: true
+
+RSpec/NamedSubject:
+  Enabled: false
