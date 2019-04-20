@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Types
   ItemType = GraphQL::ObjectType.define do
-    name 'ItemType'
-    description 'Type definition for items'
+    name "ItemType"
+    description "Type definition for items"
 
     field :id, !types.ID
     field :name, !types.String
