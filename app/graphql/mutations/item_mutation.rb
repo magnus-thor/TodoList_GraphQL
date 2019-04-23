@@ -17,5 +17,31 @@ module Mutations
         )
       end
     end
+
+    field :mark_item_done, Types::ItemType do
+      argument :id, !types.ID
+
+      resolve ->(_obj, args, _ctx) do
+        item = Item.find_by(id: args[:id])
+        return unless item
+
+        item.update(
+          done: true
+        )
+
+        item
+      end
+    end
+
+    field :delete_item, Types::ItemType do
+      argument :id, !types.ID
+
+      resolve ->(_obj, args, _ctx) do
+        item = Item.find_by(id: args[:id])
+        return unless item
+
+        item.destroy
+      end
+    end
   end
 end
